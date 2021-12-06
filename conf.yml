@@ -1,0 +1,17 @@
+# 运行模式 dev|prod
+run_mode: dev
+# 运行端口
+port: 8080
+# 是否启用登录鉴权 login:是否需要强制登录(未登录跳转至登录页)  permission:是否启用鉴权模块
+plugins:
+  - login
+  - permission
+
+# 数据库 默认是sqllite3、mysql 其他数据库需要按照接口实现，url为gorm的连接参数
+# mysql: user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local
+# postgres: host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai
+# sqlite: test.db
+db:
+  server_name: sqlite
+  url: local.db
+
